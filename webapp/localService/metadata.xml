@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZEWM_SAMPLE_TAB_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <Annotation Term="Core.SchemaVersion" String="1.0.0" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+            <EntityType Name="Sample_service" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="WarehouseNo"/>
+                </Key>
+                <Property Name="WarehouseNo" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="warehouse number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="StorageBin" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="BIN" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="StorageType" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="STORAGE TYPE" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Response" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="RESPONSE TYPE" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ErrorCode" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="ERROR CODE" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityContainer Name="ZEWM_SAMPLE_TAB_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="Sample_serviceSet" EntityType="ZEWM_SAMPLE_TAB_SRV.Sample_service" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <atom:link rel="self" href="https://VHCALAKECI.ARTIHCUS.COM:44306/sap/opu/odata/sap/ZEWM_SAMPLE_TAB_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="https://VHCALAKECI.ARTIHCUS.COM:44306/sap/opu/odata/sap/ZEWM_SAMPLE_TAB_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

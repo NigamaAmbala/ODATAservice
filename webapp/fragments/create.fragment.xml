@@ -1,0 +1,92 @@
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+    xmlns="sap.m"
+>
+    <Dialog
+        id="idCreateWHNDialog"
+        resizable="true"
+        draggable="true"
+        contentWidth="30%"
+        title="Create Warehouse"
+    >
+        <beginButton>
+            <Button
+                id="idCreateButton"
+                text="Create"
+                press="onCreate"
+                type="Success"
+            />
+        </beginButton>
+        <endButton>
+            <Button
+                id="idCancelButton"
+                text="Cancel"
+                press="onCloseDialog"
+                type="Negative"
+            />
+        </endButton>
+        <content>
+            <form:SimpleForm
+                id="idwarehouseForm"
+                editable="true"
+                layout="ResponsiveGridLayout"
+                labelSpanXL="3"
+                labelSpanL="3"
+                labelSpanM="3"
+                labelSpanS="12"
+                adjustLabelSpan="false"
+                emptySpanXL="4"
+                emptySpanL="4"
+                emptySpanM="4"
+                emptySpanS="0"
+                columnsXL="1"
+                columnsL="1"
+                columnsM="1"
+                singleContainerFullSize="false"
+            >
+                <Label
+                    id="idWHNIdLabel12"
+                    text="Warehouse No"
+                />
+                <Input
+                    id="idWHNidInput12"
+                    value="{}"
+                />
+                <Label
+                    id="idStorageBinLabel12" 
+                    text="Storage Bin"
+                />
+                <Input
+                    id="idStorageBinInput12"
+                    value="{}"
+                />
+                <Label
+                    id="idStoragetypeLabel12"
+                    text="Storage Type"
+                />
+                <Input
+                    id="idStoragetypeInput12"
+                    value="{}"
+                />
+                <Label
+                    id="idresponseLabel12"
+                    text="Response"
+                />
+                <Input
+                    id="idresponseInput12"
+                    value="{}"
+                />
+                <Label
+                    id="iderrorLabel12" 
+                    text="Error Code"
+                />
+                <Input
+                    id="iderrorInput12"
+                    value="{}"
+                />
+
+            </form:SimpleForm>
+        </content>
+    </Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,135 @@
+<mvc:View
+    controllerName="com.app.odataservice.controller.home"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <Table
+            id="idTable"
+            mode="MultiSelect"
+            items="{/Sample_serviceSet}"
+        >
+            <headerToolbar>
+                <OverflowToolbar id="overflowhearder">
+                    <ToolbarSpacer id="idtablespacer" />
+                    <Button
+                        id="idsavebutton"
+                        text="Create"
+                        press="onCreateDailog"
+                        type="Critical"
+                        icon="sap-icon://add"
+                    />
+                    <!-- <Button text="Cancel"/> -->
+                    <Button
+                        id="idcanclebutton"
+                        text="Delete"
+                        press="onDelete"
+                        type="Attention"
+                        icon="sap-icon://delete"
+                    />
+
+                    <Button
+                        id="editButton"
+                        text="Edit"
+                        press="onEdit"
+                        type="Success"
+                        icon="sap-icon://edit"
+                    />
+
+                    <Button
+                        id="saveButton"
+                        text="Save"
+                        type="Transparent"
+                        press="onSave"
+                        visible="false"
+                        icon="sap-icon://save"
+                    />
+                    <Button
+                        id="cancelButton"
+                        text="Cancel"
+                        type="Transparent"
+                        press="onCancel"
+                        visible="false"
+                        icon="sap-icon://decline"
+                    />
+                </OverflowToolbar>
+            </headerToolbar>
+            <columns>
+                <Column id="idwarehouseNO">
+                    <Title
+                        id="idwarehouseno"
+                        text="Warehouse No"
+                    />
+                </Column>
+                <Column id="idStorageBin">
+                    <Title
+                        id="idStoragedin"
+                        text="StorageBin"
+                    />
+                </Column>
+                <Column id="idStorageType">
+                    <Title
+                        id="idStoragetype"
+                        text="StorageType"
+                    />
+                </Column>
+
+                <Column id="idresponse">
+                    <Title
+                        id="idResponse"
+                        text="Response"
+                    />
+                </Column>
+                <Column id="iderrorcode">
+                    <Title
+                        id="idErrorcode"
+                        text="Error code"
+                    />
+                </Column>
+            </columns>
+
+            <items>
+                <ColumnListItem
+                    id="idColumnListAllSlots"
+                    class="AllTables"
+                >
+                    <cells>
+                            <Text
+                                id="idvehiclenoNoValue"
+                                text="{WarehouseNo}"
+                            />
+
+                         <Input
+                                id="idstiragebinNo"
+                                value="{StorageBin}"
+                                editable="false"
+                            />
+                         <Input
+                                id="idstiragetypeNo"
+                                value="{StorageType}"
+                               editable="false"
+                               
+                            />
+                       
+                         <Input
+                                id="idresponseNo"
+                                value="{Response}"
+                                editable="false"
+                                
+                            />
+                        
+                         <Input
+                                id="iderror"
+                                value="{ErrorCode}"
+                                editable="false"
+                            />
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+    </Page>
+</mvc:View>
